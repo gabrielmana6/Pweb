@@ -23,9 +23,9 @@ export class TelaDeLoginComponent implements OnInit{
     );
   }
 
-  login() {
+  login(): void {
     if(this.autenticarUsuario()) {
-      this.router.navigate(['/menu'])
+      this.router.navigate(['/menu', this.usuario.id])
     } else {
       window.alert('Credenciais incorretas');
     }
@@ -34,6 +34,7 @@ export class TelaDeLoginComponent implements OnInit{
   autenticarUsuario(): boolean {
     for(let usuario of this.usuarios) {
       if(this.usuario.username === usuario.username && this.usuario.password === usuario.password) {
+        this.usuario = usuario;
         return true;
       }
     }

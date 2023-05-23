@@ -10,7 +10,7 @@
       },
       "conta": {
         "agencia": "",
-        "saldo": 100
+        "saldo": "0"
       },
       "id": 1
     },
@@ -41,19 +41,6 @@
         "saldo": 0
       },
       "id": 3
-    },
-    {
-      "username": "",
-      "password": "",
-      "cliente": {
-        "nome": "",
-        "cpf": ""
-      },
-      "conta": {
-        "agencia": "",
-        "saldo": 0
-      },
-      "id": 4
     }
   ]
 }

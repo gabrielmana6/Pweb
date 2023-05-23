@@ -35,7 +35,7 @@
     <mat-card-actions>
       <button mat-button (click)="criarUsuario(usuario)">Criar Usuario</button>
 
-      <button mat-button routerLink="/login">Voltar</button>
+      <button mat-button [routerLink]="['/login']">Voltar</button>
     </mat-card-actions>
 
   </mat-card>

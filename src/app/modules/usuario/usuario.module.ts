@@ -5,18 +5,16 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { RouterModule } from '@angular/router';
+import { RouterLink } from '@angular/router';
 
-import { CriarUsuarioComponent } from './criar-usuario/criar-usuario.component';
-import { ListarUsuarioComponent } from './listar-usuario/listar-usuario.component';
 import { AlterarUsuarioComponent } from './alterar-usuario/alterar-usuario.component';
+import { CriarUsuarioComponent } from './criar-usuario/criar-usuario.component';
 
 
 
 @NgModule({
   declarations: [
     CriarUsuarioComponent,
-    ListarUsuarioComponent,
     AlterarUsuarioComponent
   ],
   imports: [
@@ -25,12 +23,11 @@ import { AlterarUsuarioComponent } from './alterar-usuario/alterar-usuario.compo
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    RouterModule,
-    FormsModule
+    FormsModule,
+    RouterLink
   ],
   exports: [
-    CriarUsuarioComponent,
-    ListarUsuarioComponent
+    CriarUsuarioComponent
   ]
 })
 export class UsuarioModule { }

@@ -25,4 +25,8 @@ export class UsuarioService {
     return this.httpClient.get<Usuario>(`${this.URL_USUARIOS}/${id}`);
   }
 
+  alterar(usuario: Usuario): Observable<Usuario> {
+    return this.httpClient.put<Usuario>(`${this.URL_USUARIOS}/${usuario.id}`, usuario);
+  }
+
 }

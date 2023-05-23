@@ -1,21 +1,35 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MenuComponent } from './menu/menu.component';
-import { MatMenuModule} from '@angular/material/menu';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
-import { MatToolbarModule} from '@angular/material/toolbar';
-import { RouterModule } from '@angular/router';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { RouterLink } from '@angular/router';
+
+import { AppRoutingModule } from '../app-routing.module';
+import { ListarUsuarioComponent } from '../modules/usuario/listar-usuario/listar-usuario.component';
+import { MenuComponent } from './menu/menu.component';
+
 
 @NgModule({
   declarations: [
-    MenuComponent
+    MenuComponent,
+    ListarUsuarioComponent
   ],
   imports: [
     CommonModule,
     MatButtonModule,
     MatMenuModule,
     MatToolbarModule,
-    RouterModule
+    RouterLink,
+    AppRoutingModule,
+    FormsModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   exports: [
     MenuComponent

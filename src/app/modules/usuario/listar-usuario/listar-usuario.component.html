@@ -1,1 +1,21 @@
-<p>listar-usuario works!</p>
+<div class="container">
+  <mat-card class="card-principal">
+    <mat-card-header>
+      <mat-card-title class="titulo">Seu Perfil</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+        <p>Usuario: {{usuario.username}}</p>
+        <p>Nome: {{usuario.cliente.nome}}</p>
+        <p>Idade: {{usuario.cliente.idade}}</p>
+        <p>CPF: {{usuario.cliente.cpf}}</p>
+        <p>Agencia: {{usuario.conta.agencia}}</p>
+        <p>Saldo: {{usuario.conta.saldo}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="btnAlterar()">Alterar Info</button>
+
+      <button mat-button (click)="deletar()">Deletar Conta</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
