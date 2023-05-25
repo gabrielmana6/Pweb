@@ -1,20 +1,6 @@
 {
   "Usuarios": [
     {
-      "username": "gm6",
-      "password": "123",
-      "cliente": {
-        "nome": "Gabriel Manassés",
-        "idade": "24",
-        "cpf": "1234567890"
-      },
-      "conta": {
-        "agencia": "",
-        "saldo": 0
-      },
-      "id": 1
-    },
-    {
       "username": "kilson",
       "password": "321",
       "cliente": {
