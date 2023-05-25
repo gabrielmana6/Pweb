@@ -25,9 +25,7 @@ export class AlterarUsuarioComponent {
   }
 
   alterarUsuario(){
-    this.usuarioService.alterar(this.usuario).subscribe(
-      novoUsuario => novoUsuario = this.usuario
-    )
+    this.usuarioService.alterar(this.usuario)
     this.router.navigate(['ver-perfil'], { relativeTo: this.rotaAtual.parent });
   }
 }
