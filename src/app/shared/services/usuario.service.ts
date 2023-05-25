@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Usuario } from '../model/usuario';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -27,6 +26,10 @@ export class UsuarioService {
 
   alterar(usuario: Usuario): Observable<Usuario> {
     return this.httpClient.put<Usuario>(`${this.URL_USUARIOS}/${usuario.id}`, usuario);
+  }
+
+  remover(id: number): Observable<Usuario> {
+    return this.httpClient.delete<Usuario>(`${this.URL_USUARIOS}/${id}`);
   }
 
 }
