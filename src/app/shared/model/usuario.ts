@@ -1,14 +1,12 @@
-import { Cliente } from "./cliente";
-import { Conta } from "./conta";
-
 export class Usuario {
-  public cliente: Cliente;
-  public conta: Conta;
 
-  constructor(public id?: number,
+  constructor(public id?: string,
               public username:string = '',
-              public password: string = ''){
-    this.cliente = new Cliente();
-    this.conta = new Conta('', 0);
+              public password: string = '',
+              public nome:string = '',
+              public idade: number = 0,
+              public cpf:string = '',
+              public agencia='',
+              public saldo: number= 0){
   }
 }

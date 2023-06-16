@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { UsuarioService } from 'src/app/shared/services/usuario.service';
 import { Usuario } from 'src/app/shared/model/usuario';
 import { Router } from '@angular/router';
+import { UsuarioFirestoreService } from 'src/app/shared/services/usuario-firestore.service';
 
 @Component({
   selector: 'app-tela-de-login',
@@ -13,7 +13,7 @@ export class TelaDeLoginComponent implements OnInit{
   usuario: Usuario;
   usuarios: Usuario[] = [];
 
-  constructor(private usuarioService: UsuarioService, private router: Router){
+  constructor(private usuarioService: UsuarioFirestoreService, private router: Router){
     this.usuario = new Usuario();
   }
 

@@ -8,6 +8,7 @@ import { LoginModule } from './modules/login/login.module';
 import { UsuarioModule } from './modules/usuario/usuario.module';
 import { LayoutModule } from './layout/layout.module';
 import { HttpClientModule } from '@angular/common/http';
+import { FirestoreModule } from './firestore/firestore.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     LoginModule,
     UsuarioModule,
     LayoutModule,
-    HttpClientModule
+    HttpClientModule,
+    FirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
